@@ -27,6 +27,11 @@ router.get("/stores", async (ctx) => {
 });
 
 router.post("/stores", async (ctx) => {
+  // {   
+  //   "id": 3,
+  //   "name": "store3",
+  //   "address": "address3"
+  // }
   const store = ctx.request.body;
   stores.stores.push(store);
   ctx.response.status = 201;
